@@ -3,6 +3,7 @@ package google
 import (
 	"context"
 	"fmt"
+	"github.com/hashicorp/go-version"
 	"log"
 	"reflect"
 	"regexp"
@@ -10,7 +11,6 @@ import (
 	"time"
 
 	"github.com/hashicorp/errwrap"
-	"github.com/hashicorp/go-version"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/customdiff"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
@@ -385,13 +385,13 @@ func resourceContainerCluster() *schema.Resource {
 			},
 
 			"authenticator_groups_config": {
-				Type:          schema.TypeList,
-				Optional:      true,
-				Computed:      true,
-				ForceNew:      true,
-				MaxItems:      1,
-				Description:   `Configuration for the Google Groups for GKE feature.`,
-				ConflictsWith: []string{"enable_autopilot"},
+				Type:        schema.TypeList,
+				Optional:    true,
+				Computed:    true,
+				ForceNew:    true,
+				MaxItems:    1,
+				Description: `Configuration for the Google Groups for GKE feature.`,
+				//ConflictsWith: []string{"enable_autopilot"},
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"security_group": {
