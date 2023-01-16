@@ -20,12 +20,10 @@ require (
 	github.com/mitchellh/hashstructure v1.1.0
 	github.com/spf13/afero v1.2.2 // indirect
 	github.com/zclconf/go-cty v1.5.1 // indirect
-	golang.org/x/net v0.0.0-20210503060351-7fd8e65b6420
-	golang.org/x/oauth2 v0.0.0-20210514164344-f6687ab2804c
-	golang.org/x/sys v0.0.0-20210611083646-a4fc73990273 // indirect
-	golang.org/x/tools v0.1.3 // indirect
-	google.golang.org/api v0.48.0
-	google.golang.org/grpc v1.38.0
+	golang.org/x/net v0.4.0
+	golang.org/x/oauth2 v0.0.0-20221014153046-6fdb5e3db783
+	google.golang.org/api v0.102.0
+	google.golang.org/grpc v1.52.0
 )
 
 go 1.16
